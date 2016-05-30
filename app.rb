@@ -19,3 +19,22 @@ end
 get '/' do
   haml :start
 end
+
+post '/capture' do
+  @referrer = request.referrer
+  @url = request.url
+  @ip = request.ip
+  @params = params
+  haml :capture
+end
+
+get '/capture' do
+  haml :capture
+end
+
+post '/send' do
+  @url = params[:url]
+  @body = params[:body]
+
+  haml :post
+end

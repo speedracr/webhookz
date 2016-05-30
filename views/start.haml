@@ -1,15 +1,26 @@
-.row
-  .col-sm-6
-    %h1 Hello world!
+%section
+  .row
+    .col-sm-6
+      %ul
+        %li
+          Form field for post action. Bonus: catch reply address from request
+          and offer optional URL parameters
+        %li
+          Field to enter code as parameter for post request.
+        %li
+          Show request content.
 
-.row
-  .col-sm-6
-    %ul
-      %li
-        Form field for post action. Bonus: catch reply address from request
-        and offer optional URL parameters
-      %li
-        Field to enter code as parameter for post request.
-      %li
-        Show request content.
-
+%section
+  .row
+    .col-sm-8
+      %form{ action: '/capture', method: 'post' }
+        .form-group
+          %label{ for: 'url' }
+            URL
+          %input{ type: 'text', class: 'form-control', id: 'url', placeholder: 'POST URL' }
+        .form-group
+          %label{ for: 'body' }
+            Request body
+          %input{ type: 'text', class: 'form-control', id: 'body', placeholder: 'Request body' }
+        %button{ type: 'submit', class: 'btn btn-primary' }
+          Submit

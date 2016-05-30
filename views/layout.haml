@@ -5,14 +5,18 @@
     %link{ rel: 'stylesheet', href: '//fonts.googleapis.com/css?family=Roboto:400,400italic,700|Nunito:400,700' }
     %link{ rel: 'stylesheet', href: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' }
     %link{ rel: 'stylesheet', href: 'styles.css' }
+    %link{ rel: 'stylesheet', href: 'github.css' }
+
 
   %body
     .container
       .row
         .col-sm-6
-          %h4 This is layout.
+          %h1 Webhookz
       = yield
 
-  :javascript
-    src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
-    src='//code.jquery.com/jquery-2.2.4.min.js'
+      %script{ type: 'text/javascript', src: '//code.jquery.com/jquery-2.2.4.min.js' }
+      %script{ type: 'text/javascript', src: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js' }
+      %script{ type: 'text/javascript', src: 'rainbow.min.js' }
+      %script{ type: 'text/javascript', src: 'generic.js' }
+      %script{ type: 'text/javascript', src: 'html.js' }

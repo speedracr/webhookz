@@ -7,6 +7,7 @@ gem 'dotenv'
 gem 'compass'
 gem 'haml'
 gem 'sass'
+gem 'glorify'
 
 group :development do
   gem 'shotgun'
