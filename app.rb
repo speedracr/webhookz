@@ -21,6 +21,7 @@ get '/' do
 end
 
 post '/capture' do
+  puts params
   @referrer = request.referrer
   @url = request.url
   @ip = request.ip
